@@ -11,6 +11,8 @@ The payloads are kept in the `payloads` directory, and are structured using the 
 
 The parts that are used for iteration are everything after `cpe:/o:`, split by the `:` character. This allows you to target not only specific operating systems, but also different versions. The highest level matching directory is used, and all scripts within that directory built and executed in order. The above `cpe` subsequently matches the example payload, under the directory `payloads/apple/mac_os_x`.
 
+Payloads may either be `duckyscript` (either an extension of `.rb`, or no extension at all), or `bash` (an extension of `.sh`).
+
 ## Setup
 
 The included `setup.sh` script *should* get you ready to run out of the box. Simply clone this repo and run the `setup.sh` script. When you reboot the Pi Zero, the NIC and HID devices will be setup, an `nmap` scan fired against `1.0.0.10`, and any subsequent payloads will be triggered.
